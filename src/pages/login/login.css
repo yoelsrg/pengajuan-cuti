@@ -1,0 +1,47 @@
+/* Login.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevents the scrollbar from appearing */
+}
+
+.login-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+}
+
+.login-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.freepik.com/free-photo/clipboard-stethoscope_23-2148519763.jpg?t=st=1724900139~exp=1724903739~hmac=d8ea997fcf5f1903ce7bdb16582805c20fe010a7ce8ba6eed249aa177f7b5020&w=996');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Apply blur effect */
+  z-index: -1; /* Ensure it's behind the content */
+}
+
+.login-container {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  padding-top: 45px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* To ensure it's placed correctly in stacking order */
+  z-index: 10; /* Ensures interactivity is retained */
+  width: 550px; /* Adjust width as needed */
+  height: 400px;
+}
